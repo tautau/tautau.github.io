@@ -1,68 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>{{ page.title }}</title>
-  {{ site.github_changelog }}
-  {{ site.head }}
-<style>
-  /* Navigation Bar */
-  .site-nav {
-    width: 100%;
-    background: #1E1E1E;                   /* dark Midnight-like */
-    border-bottom: 1px solid #333;
-    padding: 12px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-  }
+---
+layout: default
+---
 
-  .site-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 35px;
-    flex-wrap: wrap;
-  }
+{% include nav.html %}
 
-  .site-nav a {
-    color: #E6E6E6;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: 500;
-    padding: 8px 4px;
-    transition: color 0.20s ease, border-bottom-color 0.20s ease;
-    border-bottom: 2px solid transparent;
-  }
-
-  .site-nav a:hover {
-    color: white;
-    border-bottom-color: #4FA3FF;         /* highlight color */
-  }
-
-  /* Mobile adjustments */
-  @media (max-width: 600px) {
-    .site-nav ul {
-      gap: 18px;
-    }
-    .site-nav a {
-      font-size: 15px;
-    }
-  }
-</style>
-
-  <!-- GitHub Pages theme improves styling automatically -->
-</head>
-<body>
-
-  {% include nav.html %}
-
-  <main style="max-width:800px; margin:auto; padding:20px;">
-    {{ content }}
-  </main>
-
-</body>
-</html>
+{{ content }}
